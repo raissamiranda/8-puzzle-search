@@ -133,32 +133,32 @@ class Node:
     def bfs(self):
         expandedStates = 0
         solution = None
-        queue = [self] # fila para armazenar nós que serão explorados
-        while solution == None: # enquanto a fila não estiver vazia
+        queue = [self]
+        while solution == None:
             for node in queue:
-                if node.foundSolution(): # se o nó for solução, retorna ele
+                if node.foundSolution():
                     solution = node
                     break
             newQueue = []
             for node in queue:
                 node.expand()
                 expandedStates += 1
-                for child in node.children:  # para cada filho do nó
-                    newQueue.append(child)  # adiciona o filho na fila
+                for child in node.children:
+                    newQueue.append(child)
             queue.clear()
             queue = newQueue.copy()
-        return solution, expandedStates # se a fila ficar vazia e não encontrar solução, retorna None
+        return solution, expandedStates
 
     # Dijkstra algorithm
     def dijkstra(self):
-        pq = queue.Queue()   # cria fila de prioridade
-        pq.put(self)             # coloca o nó raiz na fila -> (numero de prioridade, nó)
+        pq = queue.Queue()
+        pq.put(self)
         expandedNodes = 0
         visited = []
         solution = None
 
         while not pq.empty():
-            node = pq.get()    # vai pegar o com menor valor de prioridade
+            node = pq.get()
             expandedNodes += 1
             visited.append(node)
 
@@ -184,7 +184,7 @@ class Node:
 
     # Depth First Search
     def dfs(self, limit):
-        stack = queue.LifoQueue() # pilha para armazenar nós que serão explorados
+        stack = queue.LifoQueue()
         stack.put(self)
         solution = None
         expandedStates = 0
@@ -234,13 +234,13 @@ class Node:
 
     # Greedy algorithm
     def greedy(self):
-        nodes = [self]  # Lista de nós a serem explorados
-        visited = []  # Conjunto para manter os nós visitados
+        nodes = [self]
+        visited = []
         solution = None
         expandedStates = 0
         while nodes:
-            nodes.sort(key=lambda node: node.heuristic)  # Ordena os nós com base na heurística
-            node = nodes[0]  # Pega o nó com a menor heurística
+            nodes.sort(key=lambda node: node.heuristic)
+            node = nodes[0]
             if node.foundSolution():
                 solution = node
                 break
@@ -250,8 +250,8 @@ class Node:
             expandedStates += 1
             for child in node.children:
                 if child not in visited:
-                    child.heuristic = child.findDistanceToCorrectPosition()  # Calcula a heurística do filho
-                    nodes.append(child)  # Adiciona o filho à lista de nós a serem explorados
+                    child.heuristic = child.findDistanceToCorrectPosition()
+                    nodes.append(child)
         return solution, expandedStates
 
     # Hill Climbing algorithm
