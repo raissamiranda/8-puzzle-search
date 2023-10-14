@@ -23,3 +23,6 @@ $   python3 TP1.py <algoritmo> <configuração inicial> <PRINT-opcional>
 
 Um exemplo de chamada para o algoritmo Hill Climbing seria:
 $   python3 TP1.py H 1 2 3 4 5 6 7 8 0 PRINT
+
+O programa retornará o número de estados percorridos até encontrar a solução, se houver.
+Caso o parâmetro PRINT seja usado, mostrará em seguida, todos esses estados intermediários.
