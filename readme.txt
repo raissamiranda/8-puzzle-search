@@ -1,3 +1,5 @@
+INFORMAÇÕES PARA EXECUÇÃO DO PROGRAMA
+
 Para realizar a execução do programa, é necessário descompactar o arquivo TP1.zip. Uma vez descompactado, basta
 acessar o diretório em que o programa foi armazenado:
 
