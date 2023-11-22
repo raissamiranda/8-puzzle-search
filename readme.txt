@@ -1,28 +1,28 @@
-INFORMAÇÕES PARA EXECUÇÃO DO PROGRAMA
+# 8 puzzle search
 
-Para realizar a execução do programa, é necessário descompactar o arquivo TP1.zip. Uma vez descompactado, basta
-acessar o diretório em que o programa foi armazenado:
+## Instructions for execution
 
-$   cd <diretoriodestino>
+To execute the program, it is necessary to unzip the TP1.zip file. Once unzipped, simply access the directory where the program is stored:
 
-Agora, é necessário executar o problema com as informações na linha de comando. O primeiro parâmetro deverá ser
-uma letra representando o algoritmo utilizado, seguido da configuração da entrada (as 3 linhas do 8 puzzle em
-sequência, usando o número 0 para representar o espaço vazio). E, opcionalmente, um último parâmetro (PRINT)
-indicando se os passos até a solução devem ser impressos.
+```
+$   cd <destdirectory>
+```
 
-A seguir, mostra-se a sigla usada para cada algoritmo:
-A -> A* search
-B -> Breadth-first search
-G -> Greedy best-first search
-H -> Hill Climbing
-I -> Iterative deepening search
-U -> Uniform-cost search
+Now, it is necessary to run the problem with the information in the command line. The first parameter should be a letter representing the algorithm used, followed by the configuration of the input (the 3 lines of the 8-puzzle in sequence, using the number 0 to represent the empty space). Optionally, a last parameter (PRINT) indicating whether the steps to the solution should be printed.
 
-A seguir a instrução de execução:
-$   python3 TP1.py <algoritmo> <configuração inicial> <PRINT-opcional>
+Below is the acronym used for each algorithm:
 
-Um exemplo de chamada para o algoritmo Hill Climbing seria:
+* A -> A* search
+* B -> Breadth-first search
+* G -> Greedy best-first search
+* H -> Hill Climbing
+* I -> Iterative deepening search
+* U -> Uniform-cost search
+
+Here is the execution instruction:
+$   python3 TP1.py <algorithm <initConfig> <PRINT-optional>
+
+An example call for the Hill Climbing algorithm:
 $   python3 TP1.py H 1 2 3 4 5 6 7 8 0 PRINT
 
-O programa retornará o número de estados percorridos até encontrar a solução, se houver.
-Caso o parâmetro PRINT seja usado, mostrará em seguida, todos esses estados intermediários.
+The program will return the number of states traversed until a solution is found, if any. If the PRINT parameter is used, it will then display all these intermediate states.
