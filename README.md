@@ -20,9 +20,13 @@ Below is the acronym used for each algorithm:
 * U -> Uniform-cost search
 
 Here is the execution instruction:
+```
 $   python3 TP1.py <algorithm <initConfig> <PRINT-optional>
+```
 
 An example call for the Hill Climbing algorithm:
+```
 $   python3 TP1.py H 1 2 3 4 5 6 7 8 0 PRINT
+```
 
 The program will return the number of states traversed until a solution is found, if any. If the PRINT parameter is used, it will then display all these intermediate states.
